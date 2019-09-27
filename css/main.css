@@ -46,7 +46,21 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+html {
+	font-size: 0.75rem;
+}
 
+@media only screen and (min-width: 768px) {
+	html {
+		font-size: 0.9rem;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	html {
+		font-size: 1rem;
+	}
+}
 
 /*--------------------------------------------------------------
 4.0 - ELEMENTS 
@@ -56,20 +70,101 @@
 
 /*--- Headings ---*/
 
-h1 {
-	font: 400 28px 'Pacifico', cursive;
+h1, h4 {
+	font: 400 1.75rem 'Pacifico', cursive;
+	margin: 0;
+}
+
+h2 {
+	color: #0eb493;
+	font-weight: 800;
+	font-size: 1.70rem;
+	letter-spacing: -0.05em;
+	text-transform: uppercase;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+h2:after {
+	background-color: rgba(6,32,51,0.1);
+	content: '';
+	display: block;
+	width: 8em;
+	height: 0.05em;
+	position: absolute;
+	top: 2em;
+	left: calc(50% - 4em);
+}
+
+
+h3 {
+	color: #062033;
+	font-size: 1.25rem;
+	margin-top: 3em;
+}
+
+/*--- Paragraphs ---*/
+
+p.inline-block {
+	color: rgba(255,255,255,0.3);
+	font-size: 0.9rem;
+	margin-bottom: 0;
+}
+
+#hero p:first-child {
+	font-size: 4em;
+	font-weight: 300;
+	margin: 0;
+}
+
+#hero p {
+	font-weight: 300;
+}
+
+#hero p:first-child span {
+	font-weight: 700;
+}
+
+#hero p:nth-child(2) {
+	font-size: 3rem;
+	margin: 0;
+}
+
+#hero p:last-child {
+	font-size: 1.15rem;
+}
+
+#features p {
+	color: rgba(6,32,51,0.7);
+	font-size: 0.9rem;
+	line-height: 1.5em;
+}
+
+#works p {
+	color: rgba(6,32,51,0.8);
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1.5em;
+	margin-top: 5em;
+}
+
+
+footer p {
+	font-size: 0.8rem;
+	line-height: 1.8em;
 }
 
 /*--- Anchors ---*/
 
 a {
-	font-size: 13px;
+	font-size: 0.85rem;
 	font-weight: 400;
-	margin-left: 30px;
+	margin-left: 2.75em;
 	text-decoration: none;
 }
 
-a:hover {
+a:hover, #hero p:nth-child(2) span {
 	color: #0feb9e;
 }
 
@@ -79,29 +174,54 @@ a:hover {
 5.0 - FRAMEWORK 
 ---------------------------------------------------------------*/
 
-.float-left {
-	float: left;
+header div.col-lg-6, nav.col-lg-6 {
+	margin-bottom: 0;
 }
 
-.float-right {
-	float: right;
+nav.col-lg-6 {
+	margin-top: 0.35em;
 }
 
+#features {
+	padding: 4em 0 5em 0;
+}
+
+#works {
+	padding: 4em 5em 5em 5em;
+}
+
+section.col-lg-4 {
+	padding-right: 3em;
+}
 
 
 /*--------------------------------------------------------------
 6.0 - COMPONENTS 
 ---------------------------------------------------------------*/
 
+footer {
+	background-color: #1ea78d;
+	border-top: solid 0.25em #062033;
+	padding: 5em 0;
+}
+
 /*--- Header --*/
 
 body > header > div:first-child {
 	background-color: #10443f;
+	padding: 0.5em 0;
 }
 
+#hero {
+	padding: 20em 0 10em 0;
+}
 
 /*--- Navigation ----*/
 
+nav {
+	text-align: right;
+	margin: 0;
+}
 
 
 /*--------------------------------------------------------------
@@ -114,4 +234,22 @@ body > header > div:first-child {
 
 .txt-white {
 	color: #fff;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+/*--- Color ----*/
+
+#hero {
+	background-color: #104f41;
+}
+
+#features {
+	background-color: #f4f7f9;
+}
+
+.float-right {
+	float: right;
 }

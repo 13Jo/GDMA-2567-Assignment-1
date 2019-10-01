@@ -66,20 +66,29 @@ html {
 4.0 - ELEMENTS 
 ---------------------------------------------------------------*/
 
+/*--- LISTS ---*/
+
+ul {
+	padding-left: 0;
+}
+
 /*--- TYPOGRAPHY ---*/
 
 /*--- Headings ---*/
 
+h1 {
+	margin: 0 0 0 1em;
+}
+
 h1, h4 {
 	font: 400 1.75rem 'Pacifico', cursive;
-	margin: 0;
 }
 
 h2 {
 	color: #0eb493;
 	font-weight: 800;
 	font-size: 1.70rem;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.025em;
 	text-transform: uppercase;
 	position: relative;
 	top: 0;
@@ -101,8 +110,39 @@ h2:after {
 h3 {
 	color: #062033;
 	font-size: 1.25rem;
+	margin-top: 0em;
+}
+
+#first-h3 {
 	margin-top: 3em;
 }
+
+h4 {
+	margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+	h1 {
+		margin: 0;
+	}
+	
+	h3 {
+		margin-top: 3em;
+	}
+	
+}
+
+@media only screen and (min-width: 1024px) {
+	h1 {
+		margin: 0;
+	}
+	
+	h3 {
+		margin-top: 3em;
+	}
+}
+
+
 
 /*--- Paragraphs ---*/
 
@@ -113,7 +153,7 @@ p.inline-block {
 }
 
 #hero p:first-child {
-	font-size: 4em;
+	font-size: 3.5em;
 	font-weight: 300;
 	margin: 0;
 }
@@ -127,7 +167,7 @@ p.inline-block {
 }
 
 #hero p:nth-child(2) {
-	font-size: 3rem;
+	font-size: 2.6rem;
 	margin: 0;
 }
 
@@ -137,35 +177,102 @@ p.inline-block {
 
 #features p {
 	color: rgba(6,32,51,0.7);
-	font-size: 0.9rem;
+	font-size: 1.125rem;
 	line-height: 1.5em;
 }
 
 #works p {
 	color: rgba(6,32,51,0.8);
-	font-size: 1rem;
+	font-size: 1.125rem;
 	font-weight: 600;
-	line-height: 1.5em;
+	line-height: 1.75em;
 	margin-top: 5em;
 }
 
 
 footer p {
-	font-size: 0.8rem;
+	font-size: 1rem;
 	line-height: 1.8em;
 }
+
+@media only screen and (min-width: 768px) {
+	
+	#hero p:first-child {
+		font-size: 3.75em;
+	}
+	
+	#hero p:nth-child(2) {
+		font-size: 2.8rem;
+	}
+	
+	#features p {
+		font-size: 0.94rem;
+		line-height: 1.5em;
+	}
+	
+	#works p {
+		font-size: 1.05rem;
+		line-height: 1.65em;
+	}
+	
+	footer p {
+		font-size: 0.8rem;
+		line-height: 1.8em;
+	}
+	
+}
+
+@media only screen and (min-width: 1024px) {
+	
+	#hero p:first-child {
+		font-size: 4em;
+	}
+	
+	#hero p:nth-child(2) {
+		font-size: 3rem;
+	}
+	
+	#features p {
+		font-size: 0.9rem;
+		line-height: 1.5em;
+	}
+	
+	#works p {
+		font-size: 1rem;
+		line-height: 1.5em;
+	}
+	
+}
+
 
 /*--- Anchors ---*/
 
 a {
-	font-size: 0.85rem;
+	font-size: 1.1rem;
 	font-weight: 400;
-	margin-left: 2.75em;
+	margin-left: 1.62em;
+	margin-right: 1.62em;
 	text-decoration: none;
 }
 
 a:hover, #hero p:nth-child(2) span {
 	color: #0feb9e;
+}
+
+@media only screen and (min-width: 768px) {
+	a {
+		font-size: 1rem;
+		margin-left: 2em;
+		margin-right: 0;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	a {
+		font-size: 0.85rem;
+		margin-left: 2em;
+		margin-right: 0;
+	}
 }
 
 
@@ -186,12 +293,28 @@ nav.col-lg-6 {
 	padding: 4em 0 5em 0;
 }
 
+#features section {
+	padding: 0 7em 0 7em;	
+}
+
 #works {
 	padding: 4em 5em 5em 5em;
 }
 
 section.col-lg-4 {
 	padding-right: 3em;
+}
+
+@media only screen and (min-width: 768px) {
+		#features section {
+		padding: 0 2em 0 2em;	
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+		#features section {
+		padding: 0 2em 0 2em;	
+	}
 }
 
 
@@ -202,7 +325,13 @@ section.col-lg-4 {
 footer {
 	background-color: #1ea78d;
 	border-top: solid 0.25em #062033;
-	padding: 5em 0;
+	padding: 5em 0 0 2.5em;
+}
+
+@media only screen and (min-width: 768px) {
+	footer {
+		padding: 5em 0 0 0;	
+	}
 }
 
 /*--- Header --*/
